@@ -11,7 +11,8 @@ Having installed the prequisities from the datasource-bigdata, running
 will start a jupyter container containing the datasource.py file and an Example notebook. In order to correctly user the datasource.py, datasource-bigdata should be installed and initialized first.
 
 Visit 
- > http://<ip-address>:8888
- 
- to open jupyterlab, and connect with the code "datasource2023".
+ > http://XXX.YYY.ZZZ.WWW:8888
+where XXX.YYY.ZZZ.WWW the ip of the server running the docker container, to open jupyterlab.
+
+Connect with the code "datasource2023".
 
