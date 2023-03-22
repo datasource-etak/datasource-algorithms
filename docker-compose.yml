@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  jupyter:
+    image: datasource/algorithmic
+    build:
+      context: .
+    container_name: jupyter
+    networks:
+      - jupyter-network
+    volumes:
+      - ./notebooks:/fs
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - '8888:8888'
+    environment:
+      - PASSWORD=datasource
+networks:
+  jupyter-network:
+    driver: bridge
+    external: false
+    name: jupyter-network
