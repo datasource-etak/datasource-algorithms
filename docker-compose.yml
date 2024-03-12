@@ -7,16 +7,15 @@ services:
       context: .
     container_name: jupyter
     networks:
-      - jupyter-network
+      - docker_bda-network
     volumes:
-      - ./notebooks:/fs
-      - /etc/letsencrypt:/etc/letsencrypt
+      - ./notebooks:/fs       
+    #      - /etc/letsencrypt:/etc/letsencrypt
     ports:
       - '8888:8888'
     environment:
       - PASSWORD=datasource
 networks:
-  jupyter-network:
-    driver: bridge
-    external: false
-    name: jupyter-network
+  docker_bda-network:
+    external: true
+
